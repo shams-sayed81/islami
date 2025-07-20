@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:adhan/adhan.dart';
 import 'package:intl/intl.dart';
 import 'package:islamic13/style/colors_manager.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../style/assets_manager.dart';
 import '../../../style/strings_manager.dart';
 import '../widgets/azkar_item.dart';
@@ -255,7 +256,7 @@ class _TimeTabState extends State<TimeTab> {
                           azkar: StringsManager.evening,
                         ),
                         onTap: () {
-                          launchUrl(Uri.parse('https://www.islambook.com/azkar/2/%D8%A3%D8%B0%D9%83%D8%A7%D8%B1-%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%A1'));
+                          azkarLaunchUrl(Uri.parse('https://www.islambook.com/azkar/2/%D8%A3%D8%B0%D9%83%D8%A7%D8%B1-%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%A1'));
                         },
                       ),
                       InkWell(
@@ -264,7 +265,7 @@ class _TimeTabState extends State<TimeTab> {
                           azkar: StringsManager.morning,
                         ),
                         onTap: () {
-                          launchUrl(Uri.parse('https://www.islambook.com/azkar/1/%D8%A3%D8%B0%D9%83%D8%A7%D8%B1-%D8%A7%D9%84%D8%B5%D8%A8%D8%A7%D8%AD'));
+                          azkarLaunchUrl(Uri.parse('https://www.islambook.com/azkar/1/%D8%A3%D8%B0%D9%83%D8%A7%D8%B1-%D8%A7%D9%84%D8%B5%D8%A8%D8%A7%D8%AD'));
 
                         },
                       ),
@@ -279,7 +280,7 @@ class _TimeTabState extends State<TimeTab> {
     );
   }
 
-  Future launchUrl(Uri url) async {
+  Future azkarLaunchUrl(Uri url) async {
     if (!await launchUrl(url)) {
       throw Exception('Could not launch $url');
     }
