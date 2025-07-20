@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/date_symbol_data_file.dart';
 import 'package:islamic13/model/PrefHelper.dart';
 import 'package:islamic13/ui/HadithDetails/hadithDetails.dart';
 import 'package:islamic13/ui/home/screen/home_screen.dart';
@@ -12,7 +13,7 @@ void main() async{
  WidgetsFlutterBinding.ensureInitialized();
   await PrefHelper.init();
 
-   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+ SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
   runApp(const MyApp());
 }
 
