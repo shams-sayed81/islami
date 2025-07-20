@@ -10,6 +10,12 @@ class Surah {
     required this.numberOfVerses,
     required this.order,
   });
+
+
+
 }
+
+
+
 
 

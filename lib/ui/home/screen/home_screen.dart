@@ -19,18 +19,20 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex=0;
-  List tabs = const [
+  List tabs =  [
      QuranTab(),
-    AhadithTab(),
-    SebhaTab(),
-    RadioTab(),
-    TimeTab()
+     AhadithTab(),
+   const SebhaTab(),
+   const RadioTab(),
+   const TimeTab()
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+
+
       bottomNavigationBar: NavigationBar(
         selectedIndex: selectedIndex,
         onDestinationSelected: (index){
@@ -39,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
           });
         },
         backgroundColor: ColorsManager.primary,
-        indicatorColor: ColorsManager.navBack,
+        indicatorColor: ColorsManager.navBack, //selected tab icon color
         labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
         destinations: [
           NavigationDestination(
@@ -113,7 +115,6 @@ class _HomeScreenState extends State<HomeScreen> {
               label: StringsManager.time ),
         ],
       ),
-
       body: tabs[selectedIndex],
     );
   }

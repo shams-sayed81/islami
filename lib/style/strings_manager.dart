@@ -6,6 +6,8 @@ static const String radio ='Radio';
 static const String time ='Time';
 static const String mostRecently ='Most Recently';
 static const String suraList ='Sura list : ';
+static const String morning ='Morning Azkar';
+static const String evening ='Evening Azkar ';
 
 
 }

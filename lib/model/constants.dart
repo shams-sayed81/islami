@@ -1,3 +1,4 @@
+import 'package:islamic13/model/hadithModel.dart';
 import 'package:islamic13/model/suraModel.dart';
 
 List<Surah> suraList = [
@@ -116,3 +117,5 @@ List<Surah> suraList = [
   Surah(arabicName: "الفلق", englishName: "Al-Falaq", numberOfVerses: "5", order: "113"),
   Surah(arabicName: "الناس", englishName: "An-Nas", numberOfVerses: "6", order: "114"),
 ];
+
+
